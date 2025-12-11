@@ -4,7 +4,7 @@ import { Pizza, PizzaSliceState, Status } from './types';
 
 const initialState: PizzaSliceState = {
   items: [],
-  status: Status.LOADING, // loading | success | error
+  status: Status.LOADING,
 };
 
 const pizzaSlice = createSlice({
