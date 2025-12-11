@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import debounce from 'lodash.debounce';
 
-import './Search.scss';
+import from './Search.module.scss';
 import { setSearchValue } from '../../redux/filter/slice';
 
 export const Search: React.FC = () => {
@@ -29,9 +29,9 @@ export const Search: React.FC = () => {
   };
 
   return (
-    <div className="search">
+    <div className={styles.root}>
       <svg
-        className="search__icon"
+        className={styles.icon}
         enableBackground="new 0 0 32 32"
         id="EditableLine"
         version="1.1"
@@ -67,13 +67,13 @@ export const Search: React.FC = () => {
         ref={inputRef}
         value={value}
         onChange={onChangeInput}
-        className="search__input"
+        className={styles.input}
         placeholder="Поиск пиццы..."
       />
       {value && (
         <svg
           onClick={onClickClear}
-          className="search__clearIcon"
+          className={styles.clearIcon}
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg">
           <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
