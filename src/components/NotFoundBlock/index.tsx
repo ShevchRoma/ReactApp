@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./NotFoundBlock.module.scss";
+import "./NotFoundBlock.scss";
 
 export const NotFoundBlock: React.FC = () => {
   return (
